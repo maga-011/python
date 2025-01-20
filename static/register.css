@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    min-height: 100vh;
+    background: #f9f9f9; 
+}
+
+.auth-card {
+    background: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-card h1 {
+    font-size: 1.8rem;
+    color: #6a11cb;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: #333;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-card input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.8rem;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #6a11cb;
+}
+
+.redirect {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.redirect a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.redirect a:hover {
+    color: #6a11cb;
+}
+
+.flash-messages .alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.flash-messages .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.flash-messages .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .auth-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .auth-card input {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .auth-card h1 {
+        font-size: 1.2rem;
+    }
+
+    .auth-card input {
+        padding: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-primary {
+        padding: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .redirect {
+        font-size: 0.8rem;
+    }
+}

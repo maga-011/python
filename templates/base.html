@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo">My Portfolio</div>
+          <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/aboutme">About</a></li>  
+              <li><a href="/achievements">Achievements</a></li>
+              <li><a href="/contact">Contact </a></li>
+              <li><a href="/feedback" >Feedback </a></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+      <div class="tbc">
+        <a href="https://www.tbceducation.ge/">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNBHHKUmH3MlWbUWWbb-k56Rk5Ej0DvOXoyQ&s" alt="Logo">
+        </a>
+<div class="end">
+        <span>TBC</span>
+      </div>
+      </div>
+  </footer>
+</body>
+</html>

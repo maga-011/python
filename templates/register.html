@@ -1,0 +1,68 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/register.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<main class="auth-container">
+    <div class="auth-card">
+        <h1>Register</h1>
+
+        <!-- Flash Messages Section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('register') }}" method="post">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <label for="username">{{ form.username.label }}</label>
+                {{ form.username(class="form-control", id="username", placeholder="Enter your username") }}
+            </div>
+
+            <div class="form-group">
+                <label for="password">{{ form.password.label }}</label>
+                {{ form.password(class="form-control", id="password", placeholder="Enter your password") }}
+            </div>
+
+            <div class="form-group">
+                <label for="repeat_password">{{ form.repeat_password.label }}</label>
+                {{ form.repeat_password(class="form-control", id="repeat_password", placeholder="Repeat your password") }}
+            </div>
+
+            <div class="form-group">
+                <label for="mail">{{ form.mail.label }}</label>
+                {{ form.mail(class="form-control", id="mail", placeholder="Enter your email") }}
+            </div>
+
+            <div class="form-group">
+                <label for="phone_number">{{ form.phone_number.label }}</label>
+                {{ form.phone_number(class="form-control", id="phone_number", placeholder="Enter your phone number") }}
+            </div>
+
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+
+        <p class="redirect">Already have an account? <a href="/login">Login</a></p>
+    </div>
+</main>
+
+<ul>
+    {% for user in users %}
+        <li>{{ user.username }} - {{ user.mail }} - {{ user.phone_number }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

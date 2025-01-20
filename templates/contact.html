@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}contact{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/contact.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<main>
+    <section class="contact-form">
+        <div class="container">
+            <h2>Send Me a Message</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <h2>Other Ways to Contact</h2>
+            <p>Email: <a href="mailto:muhamedkarabagli08@gmail.com">muhamedkarabagli08@gmail.com</a></p>
+            <p>Phone Number: +995 558 155 365</p>
+            <p>Follow me on:</p>
+            <div class="social-links">
+                <a href="https://discord.com/channels/@me" target="_blank">Discord</a>
+                <a href="https://github.com/maga-011" target="_blank">GitHub</a>
+                <a href="https://www.facebook.com/muhamed.karabaghli.9" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+{%endblock%}
